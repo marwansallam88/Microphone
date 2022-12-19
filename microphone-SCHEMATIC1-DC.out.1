@@ -1,0 +1,51 @@
+
+**** 06/19/21 19:56:29 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ c:\users\marwa\desktop\circ\microphone-SCHEMATIC1-DC.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "microphone-SCHEMATIC1-DC.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 0 100meg
+------------$
+ERROR -- Invalid value
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\microphone-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING microphone-SCHEMATIC1.net ****
+* source MICROPHONE
+C_C2         N00734 N00752  0.47u  
+C_C3         0 N01478  4.7u  
+C_C4         0 N01189  47u  
+Q_Q1         N01371 N00752 N01478 Q2N3009
+R_R1         0 N00752  27k  
+R_R12         N02167 0  8  
+Q_Q2         N01189 N01371 N01997 Q2N3009
+R_R2         N00752 N01189  220k  
+R_R13         0 N01997  1k  
+V_V1         N00734 0 DC 0Vdc AC 1Vac 
+C_C5         N01997 N02167  33u  
+R_R4         0 N01478  1.5k  
+V_V2         N01189 0 9Vdc
+R_R5         N01371 N01189  10k  
+
+**** RESUMING microphone-SCHEMATIC1-DC.sim.cir ****
+.END
+

@@ -1,0 +1,16 @@
+** Profile: "SCHEMATIC1-AC"  [ Z:\GUC\S6\Circuits\Project\Circ\microphone-SCHEMATIC1-AC.sim ] 
+
+** Creating circuit file "microphone-SCHEMATIC1-AC.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\WINDOWS\pspice.ini file:
+
+*Analysis directives: 
+.TRAN  0 10ms 0 1ms SKIPBP 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\microphone-SCHEMATIC1.net" 
+
+
+.END

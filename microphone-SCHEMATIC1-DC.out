@@ -1,0 +1,125 @@
+
+**** 06/20/21 14:34:56 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ C:\Users\marwa\Desktop\Circ\microphone-SCHEMATIC1-DC.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "microphone-SCHEMATIC1-DC.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 10 100meg
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\microphone-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING microphone-SCHEMATIC1.net ****
+* source MICROPHONE
+C_C2         N00734 N00752  0.47u  
+C_C3         0 N01478  4.7u  
+C_C4         0 N01189  47u  
+Q_Q1         N01371 N00752 N01478 Q2N3009
+R_R1         0 N00752  27k  
+R_R12         N02167 0  8  
+Q_Q2         N01189 N01371 N01997 Q2N3009
+R_R2         N00752 N01189  220k  
+R_R13         0 N01997  1k  
+V_V1         N00734 0 DC 0Vdc AC 1Vac 
+C_C5         N01997 N02167  33u  
+R_R4         0 N01478  1.5k  
+V_V2         N01189 0 9Vdc
+R_R5         N01371 N01189  10k  
+
+**** RESUMING microphone-SCHEMATIC1-DC.sim.cir ****
+.END
+
+**** 06/20/21 14:34:56 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ C:\Users\marwa\Desktop\Circ\microphone-SCHEMATIC1-DC.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3009         
+               NPN             
+          IS    1.017000E-15 
+          BF   85.99         
+          NF    1            
+         VAF  100            
+         IKF     .2617       
+         ISE   34.110000E-12 
+          NE    2.048        
+          BR    3.587        
+          NR    1            
+          RB   10            
+          RC    1.75         
+         CJE    8.359000E-12 
+         MJE     .3504       
+         CJC    4.256000E-12 
+         MJC     .1053       
+          TF  289.300000E-12 
+         XTF    2            
+         VTF    5            
+         ITF     .35         
+          TR    5.320000E-09 
+         XTB    1.5          
+          CN    2.42         
+           D     .87         
+
+
+**** 06/20/21 14:34:56 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC"  [ C:\Users\marwa\Desktop\Circ\microphone-SCHEMATIC1-DC.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00734)    0.0000 (N00752)     .7893 (N01189)    9.0000 (N01371)    6.8647     
+
+(N01478)     .1402 (N01997)    6.1029 (N02167)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -6.226E-03
+
+    TOTAL POWER DISSIPATION   5.60E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .14
+
